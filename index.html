@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Manuzinha - Profile</title>
+  <title>Pedido de Desculpas - Manuzinha 💔</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
@@ -73,45 +73,51 @@
     <div class="text-center animate-fadeIn">
       <!-- Imagem de Perfil -->
       <div class="mb-8">
-        <img src="https://media.discordapp.net/attachments/1383474665011281983/1383634502424854569/image.png?ex=684f818c&is=684e300c&hm=4d48d1e4c112f3c73775df9acab651a6bd3b971a672873afa712fc0f7f45fc37&=&format=webp&quality=lossless" alt="Perfil" class="w-32 h-32 mx-auto rounded-full profile-shadow border-2 border-white" />
+        <img src="https://media.discordapp.net/attachments/1383474665011281983/1383634502424854569/image.png?ex=684f818c&is=684e300c&hm=4d48d1e4c112f3c73775df9acab651a6bd3b971a672873afa712fc0f7f45fc37&=&format=webp&quality=lossless"
+             alt="Perfil"
+             class="w-32 h-32 mx-auto rounded-full profile-shadow border-2 border-white" />
       </div>
 
-      <!-- Nome -->
-      <h1 class="text-4xl md:text-5xl font-bold mb-4 tracking-wide animate-pulse">
-        Manuzinha
+      <!-- Nome + Título -->
+      <h1 class="text-4xl md:text-5xl font-bold mb-2 tracking-wide animate-pulse">
+        Me desculpa, Manuzinha 💔
       </h1>
 
-      <!-- Info -->
-      <p class="text-gray-300 text-lg mb-8 font-medium">
-        Linda, generosa e cheia de luz. Amiga de verdade e ama o Pietro como melhor amigo 😩💗
+      <!-- Frase de impacto -->
+      <p class="text-pink-300 text-lg italic mb-6 max-w-xl mx-auto">
+        "Eu nunca quis te magoar, e é exatamente por isso que meu coração tá pesado agora."
       </p>
 
-      <!-- Card de status -->
-      <div class="bg-blur bg-black bg-opacity-40 rounded-2xl p-4 mb-8 max-w-sm mx-auto border border-gray-600">
-        <div class="flex items-center space-x-3">
-          <img src="https://media.discordapp.net/attachments/1383474665011281983/1383634502424854569/image.png?ex=684f818c&is=684e300c&hm=4d48d1e4c112f3c73775df9acab651a6bd3b971a672873afa712fc0f7f45fc37&=&format=webp&quality=lossless" class="w-12 h-12 rounded-full border border-white" />
-          <div class="flex-1 text-left">
-            <div class="flex items-center space-x-2">
-              <span class="text-white font-semibold">Manuzinha 🖤</span>
-              <div class="w-4 h-4 bg-purple-500 rounded-full flex items-center justify-center">
-                <i class="fas fa-check text-white text-xs"></i>
-              </div>
-              <div class="w-3 h-3 bg-green-500 rounded-full"></div>
-            </div>
-            <p class="text-gray-400 text-sm italic">last seen unknown</p>
-          </div>
-        </div>
+      <!-- Carta de desculpas -->
+      <div class="bg-blur bg-black bg-opacity-40 rounded-2xl p-6 mb-6 max-w-lg mx-auto border border-gray-600">
+        <p class="text-gray-200 leading-relaxed text-base sm:text-lg">
+          Eu errei, eu sei. E você não merece isso. Só quero que saiba que cada palavra, cada gesto e cada lembrança sua continuam importantes pra mim. Eu sinto muito mesmo, do fundo do meu coração. Me perdoa? 😔<br><br>
+          Você é incrível, única e insubstituível. Se eu pudesse voltar atrás e fazer tudo certo desde o começo, faria sem pensar. ❤️
+        </p>
+      </div>
+
+      <!-- Assinatura -->
+      <p class="text-sm text-gray-400 italic mb-8">
+        — Com carinho, Pietro
+      </p>
+
+      <!-- Emojis ou botão simbólico -->
+      <div class="flex justify-center space-x-2">
+        <span class="text-2xl">🥺</span>
+        <span class="text-2xl">💖</span>
+        <span class="text-2xl">🙏</span>
       </div>
 
       <!-- Links sociais -->
-      <div class="flex justify-center space-x-6 mb-8">
-        <a href="https://discord.gg/3u6jQHaRyM" class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 backdrop-blur-sm">
+      <div class="flex justify-center space-x-6 mt-8">
+        <a href="https://discord.gg/3u6jQHaRyM"
+           class="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center hover:bg-opacity-30 transition-all duration-300 backdrop-blur-sm">
           <i class="fab fa-discord text-white text-xl"></i>
         </a>
       </div>
 
       <!-- Visualizações -->
-      <div class="flex items-center justify-center space-x-2 text-gray-300">
+      <div class="flex items-center justify-center space-x-2 text-gray-300 mt-4">
         <i class="fas fa-eye"></i>
         <span class="font-semibold" id="view-count">0</span>
       </div>
@@ -128,7 +134,6 @@
 
   <!-- Script da música e contador -->
   <script>
-    // Música de fundo e controle de volume
     const music = document.getElementById("bg-music");
     const btn = document.querySelector(".volume-button");
 
@@ -156,7 +161,6 @@
         btn.textContent = "🔇";
       });
 
-      // Ativa som no clique caso bloqueado
       document.body.addEventListener("click", () => {
         if (music.paused) {
           music.muted = false;
@@ -166,14 +170,11 @@
         }
       }, { once: true });
 
-      // Contador simples de visualizações usando localStorage
       const viewKey = "manuzinha-views";
       let views = localStorage.getItem(viewKey);
-
       if (!views) views = 0;
       views = parseInt(views) + 1;
       localStorage.setItem(viewKey, views);
-
       document.getElementById("view-count").textContent = views;
     });
   </script>
